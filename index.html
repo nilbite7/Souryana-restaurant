@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souryana- Where Taste Meets Art</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #0a0a0a;
+            color: #f1f1f1;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .text-gold {
+            color: #d4af37;
+        }
+        .bg-gold {
+            background-color: #d4af37;
+        }
+        .border-gold {
+            border-color: #d4af37;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-img {
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+        .menu-item:hover .menu-item-image {
+            transform: scale(1.1);
+        }
+        nav.scrolled {
+            background-color: rgba(10, 10, 10, 0.9);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav id="navbar" class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-3xl font-serif font-bold text-gold">Souryana</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-white hover:text-gold transition duration-300">About</a>
+                <a href="#menu" class="text-white hover:text-gold transition duration-300">Menu</a>
+                <a href="#gallery" class="text-white hover:text-gold transition duration-300">Gallery</a>
+                <a href="#booking" class="text-white hover:text-gold transition duration-300">Reservations</a>
+                <a href="#contact" class="text-white hover:text-gold transition duration-300">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black bg-opacity-90">
+            <a href="#about" class="block text-center py-2 text-white hover:bg-gold hover:text-black">About</a>
+            <a href="#menu" class="block text-center py-2 text-white hover:bg-gold hover:text-black">Menu</a>
+            <a href="#gallery" class="block text-center py-2 text-white hover:bg-gold hover:text-black">Gallery</a>
+            <a href="#booking" class="block text-center py-2 text-white hover:bg-gold hover:text-black">Reservations</a>
+            <a href="#contact" class="block text-center py-2 text-white hover:bg-gold hover:text-black">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-bg h-screen flex items-center justify-center text-center text-white">
+        <div class="bg-black bg-opacity-40 p-10 rounded-lg">
+            <h1 class="text-6xl md:text-8xl font-serif mb-4 leading-tight">Souryana</h1>
+            <p class="text-xl md:text-2xl font-light mb-8">Where Taste Meets Art</p>
+            <a href="#booking" class="bg-gold text-black font-bold py-3 px-8 rounded-full text-lg hover:bg-white hover:text-gold transition duration-300 transform hover:scale-105">
+                Reserve a Table
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-32 bg-black">
+            <div class="container mx-auto px-6 text-center max-w-4xl">
+                <h2 class="text-4xl font-serif text-gold mb-6">Our Philosophy</h2>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    At Souryana, we believe dining is an art form. Our journey began with a passion for creating extraordinary culinary experiences that delight the senses. Led by our visionary chef, we are committed to using only the freshest, locally-sourced ingredients, crafting dishes that are both innovative and timeless. Every plate tells a story of tradition, passion, and the finest flavors our region has to offer.
+                </p>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-20 md:py-32 bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-serif text-gold mb-12 text-center">Our Signature Dishes</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Menu Item 1 -->
+                    <div class="menu-item bg-black rounded-lg overflow-hidden group">
+                        <div class="overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Gourmet Salad" class="w-full h-full object-cover menu-item-image transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-serif text-gold mb-2">Orchard Harvest Salad</h3>
+                            <p class="text-gray-400">A vibrant mix of seasonal greens, crisp apples, candied walnuts, and a delicate champagne vinaigrette.</p>
+                        </div>
+                    </div>
+                    <!-- Menu Item 2 -->
+                    <div class="menu-item bg-black rounded-lg overflow-hidden group">
+                         <div class="overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1081&q=80" alt="Seared Scallops" class="w-full h-full object-cover menu-item-image transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-serif text-gold mb-2">Golden Seared Scallops</h3>
+                            <p class="text-gray-400">Pan-seared to perfection, served with a saffron risotto and a hint of citrus foam.</p>
+                        </div>
+                    </div>
+                    <!-- Menu Item 3 -->
+                    <div class="menu-item bg-black rounded-lg overflow-hidden group">
+                         <div class="overflow-hidden h-64">
+                            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Grilled Salmon" class="w-full h-full object-cover menu-item-image transition-transform duration-500 ease-in-out">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-serif text-gold mb-2">Grilled Salmon</h3>
+                            <p class="text-gray-400">Aged prime beef, grilled over an open flame, with truffle mashed potatoes and a red wine reduction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 md:py-32 bg-black">
+             <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-serif text-gold mb-12 text-center">A Glimpse Inside</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Restaurant Interior"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1552566626-52f8b828add9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Dining Area"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Plated Dessert"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt="Chef Preparing Food"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Bar Area"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt="Restaurant Entrance"></div>
+                    </div>
+                    <div class="grid gap-4">
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1481931098730-318b6f776db0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=690&q=80" alt="Cocktail"></div>
+                        <div><img class="h-auto max-w-full rounded-lg gallery-img" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Fine Dining Setup"></div>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="py-20 md:py-32 bg-gray-900/50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-4xl font-serif text-gold mb-6">Make a Reservation</h2>
+                    <p class="text-gray-300 mb-10">We would be delighted to host you. Please fill out the form below to book your table.</p>
+                </div>
+                <form id="booking-form" class="max-w-2xl mx-auto bg-black p-8 rounded-lg shadow-lg">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Name" class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" required>
+                        <input type="email" placeholder="Email Address" class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" required>
+                        <input type="date" class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" required>
+                        <input type="time" class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" required>
+                        <select class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gold" required>
+                            <option>2 Guests</option>
+                            <option>3 Guests</option>
+                            <option>4 Guests</option>
+                            <option>5 Guests</option>
+                            <option>6+ Guests</option>
+                        </select>
+                        <input type="tel" placeholder="Phone Number" class="w-full bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gold">
+                    </div>
+                    <textarea placeholder="Special requests..." rows="4" class="w-full mt-6 bg-gray-800 text-white p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+                    <button type="submit" class="mt-8 w-full bg-gold text-black font-bold py-3 px-8 rounded-full text-lg hover:bg-white hover:text-gold transition duration-300">
+                        Confirm Reservation
+                    </button>
+                    <p id="form-message" class="text-center mt-4"></p>
+                </form>
+            </div>
+        </section>
+
+        <!-- Location & Hours Section -->
+        <section id="contact" class="py-20 md:py-32 bg-black">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-serif text-gold mb-6">Visit Us</h2>
+                        <div class="space-y-4 text-lg text-gray-300">
+                            <p>123 Marsa Ajman, Ajman
+United Arab Emirates.</p>
+                            <p>Email: <a href="mailto:info@souryana.com" class="hover:text-gold">info@Souryana.com</a></p>
+                            <p>Phone: <a href="tel:+1234567890" class="hover:text-gold">(+971)6 573 7356</a></p>
+                        </div>
+                        <div class="mt-8">
+                            <h3 class="text-2xl font-serif text-gold mb-4">Opening Hours</h3>
+                            <ul class="text-gray-300">
+                                <li>Monday - Friday: 5:00 PM - 11:00 PM</li>
+                                <li>Saturday - Sunday: 4:00 PM - 12:00 AM</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="h-96 rounded-lg overflow-hidden">
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.580899086669!2d55.443847!3d25.420848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ef5f69d5e9ef8b5%3A0x4a3d6a2bb5a8aeb0!2sSouryana%20Restaurant%20and%20Cafe%2C%20Al%20Nakhil%202%2C%20Ajman%2C%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1730544000000!5m2!1sen!2sae" 
+  width="100%" 
+  height="100%" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900/50 py-10">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <a href="#" class="text-3xl font-serif font-bold text-gold mb-4 inline-block">Souryana</a>
+            <div class="flex justify-center space-x-6 my-4">
+                <a href="#" class="hover:text-gold transition duration-300">Facebook</a>
+                <a href="#" class="hover:text-gold transition duration-300">Instagram</a>
+                <a href="#" class="hover:text-gold transition duration-300">Twitter</a>
+            </div>
+            <p>&copy; 2024 Souryana. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('navbar');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Sticky navbar on scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Mobile menu toggle
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                    }
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Booking form submission
+            const bookingForm = document.getElementById('booking-form');
+            const formMessage = document.getElementById('form-message');
+
+            bookingForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                formMessage.textContent = 'Thank you! Your reservation request has been sent.';
+                formMessage.className = 'text-center mt-4 text-green-400';
+                bookingForm.reset();
+                setTimeout(() => {
+                    formMessage.textContent = '';
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+</html>
